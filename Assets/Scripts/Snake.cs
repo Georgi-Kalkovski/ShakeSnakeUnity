@@ -120,9 +120,26 @@ public class Snake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food")) {
             Grow();
-        } else if (other.gameObject.CompareTag("Obstacle")) {
-            ResetState();
         }
+        if (other.gameObject.CompareTag("WallTop"))
+        {
+            Debug.Log(String.Format("Top"));
+        }
+        if (other.gameObject.CompareTag("WallBottom"))
+        {
+            Debug.Log(String.Format("Bottom"));
+        }
+        if (other.gameObject.CompareTag("WallLeft"))
+        {
+            Debug.Log(String.Format("Left"));
+        }
+        if (other.gameObject.CompareTag("WallRight"))
+        {
+            Debug.Log(String.Format("Right"));
+        }
+        /*else if (other.gameObject.CompareTag("Obstacle")) {
+            ResetState();
+        }*/
     }
 
 }
